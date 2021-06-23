@@ -1,0 +1,140 @@
+﻿<!--HTML5-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFrog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        #copyright {
+            position: fixed;
+            overflow: hidden;
+            bottom: 0;
+            right: 0;
+            text-align: right;
+        }
+        #zatemnenie {
+            background: rgba(102, 102, 102, 0.5);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        #okno {
+            width: 350px;
+            height: 100px;
+            text-align: center;
+            padding: 15px;
+            border: 3px solid #0000cc;
+            border-radius: 10px;
+            color: #0000cc;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background: #fff;
+        }
+
+        #zatemnenie:target {
+            display: block;
+        }
+
+        .close {
+            display: inline-block;
+            border: 1px solid #0000cc;
+            color: #0000cc;
+            padding: 0 12px;
+            margin: 10px;
+            text-decoration: none;
+            background: #f2f2f2;
+            font-size: 14pt;
+            cursor: pointer;
+        }
+
+            .close:hover {
+                background: #e6e6ff;
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="main_menu">
+        <a href="#" class="navbar-brand">SmartFrog</a>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-app" viewBox="0 0 16 16">
+            <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h2A1.5 1.5 0 0 1 5 1.5v2A1.5 1.5 0 0 1 3.5 5h-2A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-2zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <ul class="categories show">
+            <!-- li*5>a[href="#"] -->
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Курсы</a></li>
+            <li><a href="#">Тесты</a></li>
+            <li><a href="#">Вход/регистрация</a></li>
+            <li><a href="#">Мессенджер</a></li>
+            <li><a href="#">Настройки</a></li>
+        </ul>
+    </nav>
+
+    <section class="main">
+        <div class="main_picture"></div>
+
+        <div class="page_content">
+            <h1>Изучаем иностранные языки вместе с SmartFrog</h1>
+            <p class="logotip">
+                <img src="https://psv4.userapi.com/c536132/u170329213/docs/d34/50007ff72151/Logotip.jpg?extra=0ANUfEQ_3VWdH4fSjKF0Czt8BV4BVTVPDeCje14McxDGh-q7EiXccrM0xDSGRT10EJ1Tf5Hzxb2ogzrKmE2d7loWBrPEtj17Dam65mXVu6Jx9S0iMSOLHsV7NB9KCKD18VOU-X5Af4ZTB6uIkktZYKco" width="30%" alt="лягушка">
+            </p>
+
+            <!-- p>lorem -->
+            <p>SmartFrog -эффективный и удобный сервис для изучения иностранных языков. Это лингвистический суперапп, который включает в себя множество инструментов и методик обучения.  Каждый пользователь может легко и быстро выучить основы выбранного им иностранного языка. SmartFrog тщательно обрабатывает последовательности слов и изображений, чтобы вы могли интуитивно понять смысл каждой новой фразы даже без переводов. Наши уроки виртуально создают ситуации, в которых нужно проявить смекалку и языковые знания.</p>
+            <button id="start_btn">Узнать подробнее</button>
+        </div>
+    </section>
+    <section class="main">
+        <div class="main_picture"></div>
+        <div class="page_content">
+            <h2>Что мы будем изучать на курсах?</h2>
+            <!-- p>lorem -->
+            <p>Если тебе нужно подготовиться к ЕГЭ по иностранному языку или у тебя важная контрольная на носу, то тебе помогут наши преподаватели и интенсивы на сайте. Именно здесь ты можешь изучать подробно лексику, грамматику, произношение. Превосходный пользовательский интерфейс, четкие инструкции, разнообразные соревнования и мессенджер помогут тебе эффективно приобрести языковые навыки. Для книголюбителей у нас есть множство книг на иностранном языке с переводом и аудированием. Для киноманов мы предоставляем целый набор фильмов и сериалов с двойными субтитрами.Стимулом для обучения служит рейтинг, так как каждый будет стремиться попасть в топ-10.</p>
+            <p>У каждого курса обучения есть свой уровень сложности: А1, А2, А3, В1... На сайте после прохождения каждого урока пользователю предоставляется возможность проверить и закрепить свои знания с помощью тестов, а после каждого курса будут проводиться беседы в устной и письменной форме с иностранцами и итоговые тесты. </p>
+            <p>Здесь ты можешь выбрать один из таких языков: английский, китайский, немецкий, французский, турецкий, латинский, арабский, итальянский, испанский. В обновлениях у нас будут появляться программы по изучению новых языков.</p>
+            <p>Если хочешь начать обучение, смело нажимай на "перейти на курсы".</p>
+
+            <div class="container">
+                <form action="frog.html" target="_self">
+                    <button id="action">Перейти на курсы</button>
+                </form>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div id="copyright">
+        <div id="zatemnenie">
+            <div id="okno">
+                Связь с администрацией: <br>Почта: uropb2013@yandex.ru <br>ВКонтакте: https://vk.com/id170329213 <br>
+                <a href="#" class="close">Закрыть окно</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#zatemnenie">Контакты</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,239 @@
+*{
+    font-family: 'Balsamiq Sans', cursive;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+h2 {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+h3{
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.logotip{
+    background-size: cover;
+    display: block;
+    text-align: center;
+}
+
+.double button{
+    font-size: 20px;
+    border: 2px solid #55c5e9; 
+    padding: 5%; 
+    outline: none;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   button.Turkish{
+    background-image : url('https://www.tourdom.ru/hotline/upload/medialibrary/940/94085710ffa9a22bfbe1af477032b38a.jpg');
+    
+  }
+
+  button.Spanish{
+    background-image : url('https://pic.tu-tu.ru/content4/shutterstock_377505535.jpg');
+    
+  }
+
+  button.English{
+    background-image : url('https://s1.1zoom.ru/prev2/482/481777.jpg');
+  }
+
+  button.Russian{
+    background-image : url('https://img.fonwall.ru/o/tx/russia-moscow-moscow-kremlin-rossiya-qehh.jpg');
+  }
+
+  button.Arabic{
+    background-image: url('https://static6.depositphotos.com/1000597/557/i/600/depositphotos_5576320-stock-photo-egypt-cheops-pyramid-and-sphinx.jpg');
+  }
+
+  button.Italian{
+    background-image : url('https://photo.e-migration.ru/wp-content/uploads/2016/10/photo-italy-2-731x409.jpg');
+  }
+
+  button.Latin{
+    background-image : url('https://libmonster.ru/m/photos/get_image/file/1f348ee1c724cfedd565673a65717329.jpg');
+  }
+
+  button.French{
+    background-image : url('https://img1.goodfon.ru/wallpaper/nbig/d/6b/paris-parizh-france-franciya-la-434.jpg');
+  }
+
+  button.German{
+    background-image : url('http://images5.alphacoders.com/870/870147.jpg');
+  }
+
+  button.Chinese{
+    background-image : url('https://st2.depositphotos.com/1030327/9971/i/600/depositphotos_99715092-stock-photo-street-decorated-with-traditional-chinese.jpg');
+  }
+
+input{
+    border: 3px solid rgb(56, 105, 196);
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:hover {
+    border-color: rgb(164, 208, 245);
+}
+
+input:focus {
+    border-color: rgb(73, 83, 236);
+}
+
+button{
+    border-radius: 3px;
+    padding: 5px;
+    background-color: rgb(40, 65, 119);
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+
+button:hover {
+    box-shadow: 0 0 1px 1px #1a3058;
+}
+
+button:active {
+    box-shadow: inset 0 0 3px 1px #1a3058;
+}
+
+.main{
+    margin: 0 auto;
+}
+
+/* Flex container */
+.container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+@media(max-width:576px){
+    .container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .container input{
+        width: 100%;
+    }
+
+    .logotip{
+        width: 100%;
+    }
+    
+    .double{
+        width: 100%;
+    }
+}
+
+.main{
+    position: relative;
+}
+
+.main_picture{
+    background-image: url('https://ramki-photoshop.ru/fon/goluboy/fony_119.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 150vh;
+    background-position: center center; 
+    background-attachment: fixed; 
+}
+
+
+.page_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5%;
+    
+    /* z-index: 10000; */
+}
+
+.main_menu{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: rgb(216, 219, 250);
+}
+
+.categories{
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+.categories li{
+    list-style: none;
+}
+
+.main_menu a{
+    text-decoration: none;
+    color: rgb(224, 66, 164);
+}
+
+.bi-menu-app{
+    display: none;
+    cursor: pointer;
+}
+
+@media(max-width:670px){
+    .main_menu{
+        flex-wrap: wrap;
+    }
+    .bi-menu-app{
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+.categories{
+    --categories-height: 1rem;
+    --categories-gap: .6rem;
+    --categories-elems-num: 6;
+    width:100%;
+    height: 0;
+    flex-direction:column;
+    align-items: flex-start;
+    gap: var(--categories-gap);
+    padding: 0;
+    overflow: hidden;
+    transition: height .7s;
+}
+
+.categories.show{
+    height:calc(var(--categories-height)*var(--categories-elems-num)+var(--categories-gap)*var(--categories-elems-num));
+}
+
+.categories{
+    height: var(categories-height);
+}
+}
